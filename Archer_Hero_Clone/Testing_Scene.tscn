@@ -8,3 +8,4 @@
 [node name="Test_Floor" parent="." instance=ExtResource( 1 )]
 
 [node name="User_Char" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00973, 0 )
