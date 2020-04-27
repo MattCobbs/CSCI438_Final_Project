@@ -68,3 +68,8 @@ func level_up():
 	
 	attack += pow( attack, 1.2 )
 	health += pow( health, 1.1 )
+
+
+func _on_Checkpoint_body_entered(body):
+	if body.name == "User_Char":
+				get_tree().change_scene("res://Testing_Scene2.tscn")

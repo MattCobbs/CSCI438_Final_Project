@@ -14,7 +14,7 @@ func _on_Start_Lvl_Button_pressed():
 		#Will need to define a variable that gets assigned the path to the currently selected level
 		
 		# Hard coded to the intro level for now
-		get_tree().change_scene("Intro_Lvl.tscn")
+		get_tree().change_scene("res://Testing_Scene.tscn")
 		
 	
 	

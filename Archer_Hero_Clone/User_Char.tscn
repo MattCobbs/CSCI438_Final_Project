@@ -10,7 +10,7 @@
 script = ExtResource( 1 )
 
 [node name="Camera_Target" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.939271, 0.343177, 0, -0.343177, 0.939271, 0, 6.6999, 7.58883 )
+transform = Transform( 1, 0, 0, 0, 0.939271, 0.343177, 0, -0.343177, 0.939271, 0, 8.77103, 7.0816 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2, 0 )
@@ -21,6 +21,5 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.871337, 0.490686, 0, -0.490686, 0.871337, 0, 15.3028, 17.1321 )
+transform = Transform( 1, 0, 0, 0, 0.694725, 0.719275, 0, -0.719275, 0.694725, 0, 14.6987, 8.21283 )
 target = NodePath("../Camera_Target")
-enabled = true

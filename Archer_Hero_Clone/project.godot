@@ -16,7 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Archer_Hero_Clone"
+run/main_scene="res://Game_Menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+window/handheld/orientation="portrait"
 
 [rendering]
 

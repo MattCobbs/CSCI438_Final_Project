@@ -26,7 +26,7 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-corner_detail = 100
+corner_detail = 20
 
 [sub_resource type="DynamicFont" id=4]
 size = 32
@@ -44,7 +44,7 @@ corner_radius_bottom_left = 5
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 77.7002, 76.3687 )
 
 [node name="Game_Menu" type="Control"]
@@ -67,6 +67,9 @@ custom_constants/shadow_offset_y = 4
 text = "1. Intro"
 align = 1
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Start_Lvl_Button" type="Button" parent="."]
 margin_left = 461.516
@@ -77,9 +80,11 @@ custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 0.666667, 0.666667, 0.666667, 1 )
 text = "Play"
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Coin_Background" type="Label" parent="."]
-editor/display_folded = true
 margin_left = 800.0
 margin_top = 5.0
 margin_right = 989.0
@@ -130,7 +135,6 @@ margin_right = -5.0
 margin_bottom = 8.0
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.495, 286.544 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
@@ -139,5 +143,5 @@ scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 [connection signal="pressed" from="Start_Lvl_Button" to="Start_Lvl_Button" method="_on_Start_Lvl_Button_pressed"]
