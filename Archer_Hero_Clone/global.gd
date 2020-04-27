@@ -1,6 +1,7 @@
 extends Node
 
-# Global Script to keep track of Character stats
+# Global Script to keep track of attributes that need to be shared between Scenes
+
 
 #Main stats for character
 #   Will probably need to change these to variables that get the loaded values from the save data
@@ -20,3 +21,8 @@ var experience_collected = 10
 
 func calculate_required_exp(level):
 	return pow(level, 1.8) + level * 4
+	
+	
+
+# Main section for loading the selected level
+

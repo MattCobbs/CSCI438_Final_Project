@@ -16,10 +16,10 @@ transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
 physics_material_override = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 5, 0, 0, 0, 0.02, 0, 0, 0, 5, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 0.02, 0, 0, 0, 3, 0, 0, 0 )
 shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.906575, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.906576, -0.950838 )
 mesh = SubResource( 4 )
 material/0 = null

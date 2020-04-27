@@ -13,9 +13,9 @@ func _on_Start_Lvl_Button_pressed():
 	#load which ever level is currently selected in the menu
 		#Will need to define a variable that gets assigned the path to the currently selected level
 		
-		#get_tree().change_scene("")
+		# Hard coded to the intro level for now
+		get_tree().change_scene("Intro_Lvl.tscn")
 		
-		pass
 	
 	
 	
