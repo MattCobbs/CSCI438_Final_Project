@@ -1,3 +1,78 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
 
-[node name="Load_Menu" type="Node2D"]
+[ext_resource path="res://Resources/Fonts/oddballz.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/Hud_Images/biohazard.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/Bradley Gratis.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Resources/Hud_Images/ezgif.com-gif-maker.png" type="Texture" id=4]
+[ext_resource path="res://Load_Menu.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 3 )
+
+[node name="Load_Menu" type="Spatial"]
+script = ExtResource( 6 )
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Camera"]
+margin_right = 1272.0
+margin_bottom = 719.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 457.098
+margin_top = 211.604
+margin_right = -485.902
+margin_bottom = -395.396
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Quarantine
+Studios"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Label"]
+position = Vector2( 162.087, -77.8655 )
+scale = Vector2( 0.47177, 0.448492 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Label"]
+position = Vector2( 546.647, 232.007 )
+scale = Vector2( 0.955056, 1 )
+texture = ExtResource( 4 )
+
+[node name="Label2" type="Label" parent="Label"]
+margin_left = 49.0
+margin_top = 373.0
+margin_right = 313.0
+margin_bottom = 448.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "4 3 8 Productions"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Stopper" type="Timer" parent="."]
+
+[node name="Next_Scene" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Stopper" to="." method="_on_Stopper_timeout"]
+[connection signal="timeout" from="Next_Scene" to="." method="_on_Next_Scene_timeout"]

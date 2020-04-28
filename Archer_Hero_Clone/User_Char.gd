@@ -72,4 +72,4 @@ func level_up():
 
 func _on_Checkpoint_body_entered(body):
 	if body.name == "User_Char":
-				get_tree().change_scene("res://Testing_Scene2.tscn")
+		get_tree().change_scene("res://Testing_Scene.tscn")

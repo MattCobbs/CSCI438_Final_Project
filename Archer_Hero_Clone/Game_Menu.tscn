@@ -1,23 +1,22 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Game_Menu.gd" type="Script" id=1]
+[ext_resource path="res://Lvl_Randomizer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Fonts/Bradley Gratis.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Selected_Level.gd" type="Script" id=3]
 [ext_resource path="res://Start_Lvl_Button.gd" type="Script" id=4]
 [ext_resource path="res://Resources/Hud_Images/hud_coin.png" type="Texture" id=5]
 [ext_resource path="res://Total_Coins.gd" type="Script" id=6]
 [ext_resource path="res://Resources/Hud_Images/pngwing.com.png" type="Texture" id=7]
 [ext_resource path="res://Char_Lvl.gd" type="Script" id=8]
-[ext_resource path="res://Resources/backgroundColorGrass.png" type="Texture" id=9]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=6]
 size = 32
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 24
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -33,92 +32,36 @@ size = 32
 outline_color = Color( 0.960784, 0.94902, 0.94902, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="DynamicFont" id=6]
-size = 32
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 77.7002, 76.3687 )
+[node name="Game_Menu" type="Spatial"]
 
-[node name="Game_Menu" type="Control"]
-script = ExtResource( 1 )
+[node name="Lvl_Randomizer" parent="." instance=ExtResource( 1 )]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1025.0
-margin_bottom = 602.0
-color = Color( 0.0431373, 0.266667, 0.54902, 1 )
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.998673, 0.0309205, -0.0411838, 0, 0.799695, 0.600406, 0.0514993, -0.59961, 0.798634, 0, 32.2545, 38.3252 )
 
-[node name="Selected_Level" type="Label" parent="."]
-margin_left = 469.053
-margin_top = 164.352
-margin_right = 543.053
-margin_bottom = 197.352
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 4
-text = "1. Intro"
-align = 1
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Start_Lvl_Button" type="Button" parent="."]
-margin_left = 461.516
-margin_top = 387.3
-margin_right = 565.516
-margin_bottom = 456.3
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_hover = Color( 0.666667, 0.666667, 0.666667, 1 )
-text = "Play"
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Coin_Background" type="Label" parent="."]
-margin_left = 800.0
-margin_top = 5.0
-margin_right = 989.0
-margin_bottom = 61.0
-custom_styles/normal = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Coin_Background"]
-position = Vector2( 32.5121, 27.1735 )
-scale = Vector2( 0.154948, 0.122357 )
-texture = ExtResource( 5 )
-
-[node name="Total_Coins" type="Label" parent="Coin_Background"]
-margin_left = 74.059
-margin_top = 13.3698
-margin_right = 184.059
-margin_bottom = 44.3698
-custom_fonts/font = SubResource( 4 )
-text = "Coin_Value"
-align = 1
-script = ExtResource( 6 )
-
-[node name="Level_Background" type="Label" parent="."]
+[node name="Level_Background" type="Label" parent="Camera"]
+visible = false
 margin_left = 9.0
 margin_top = 6.0
 margin_right = 235.0
 margin_bottom = 57.0
 custom_styles/normal = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite" type="Sprite" parent="Level_Background"]
+[node name="Sprite" type="Sprite" parent="Camera/Level_Background"]
 position = Vector2( 37.887, 26.082 )
 scale = Vector2( 0.0476228, 0.0489622 )
 texture = ExtResource( 7 )
 
-[node name="Char_Lvl" type="Label" parent="Level_Background"]
+[node name="Char_Lvl" type="Label" parent="Camera/Level_Background"]
 margin_left = 20.9461
 margin_top = 10.9461
 margin_right = 58.9461
@@ -128,20 +71,48 @@ text = "Lvl"
 align = 1
 script = ExtResource( 8 )
 
-[node name="ProgressBar" type="ProgressBar" parent="Level_Background"]
+[node name="ProgressBar" type="ProgressBar" parent="Camera/Level_Background"]
 margin_left = -9.0
 margin_top = -6.0
 margin_right = -5.0
 margin_bottom = 8.0
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 516.495, 286.544 )
+[node name="Coin_Background" type="Label" parent="Camera"]
+visible = false
+margin_left = 1085.15
+margin_top = 3.08627
+margin_right = 1274.15
+margin_bottom = 59.0863
+custom_styles/normal = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
-position = Vector2( 0, 1.30835 )
-scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 9 )
+[node name="Sprite" type="Sprite" parent="Camera/Coin_Background"]
+position = Vector2( 32.5121, 27.1735 )
+scale = Vector2( 0.154948, 0.122357 )
+texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 7 )
-[connection signal="pressed" from="Start_Lvl_Button" to="Start_Lvl_Button" method="_on_Start_Lvl_Button_pressed"]
+[node name="Total_Coins" type="Label" parent="Camera/Coin_Background"]
+margin_left = 74.059
+margin_top = 13.3698
+margin_right = 184.059
+margin_bottom = 44.3698
+custom_fonts/font = SubResource( 4 )
+text = "Coin_Value"
+align = 1
+script = ExtResource( 6 )
+
+[node name="Start_Lvl_Button" type="Button" parent="Camera"]
+margin_left = 572.513
+margin_top = 442.798
+margin_right = 676.513
+margin_bottom = 511.798
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 0.666667, 0.666667, 0.666667, 1 )
+text = "Play"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Camera/Start_Lvl_Button" to="Camera/Start_Lvl_Button" method="_on_Start_Lvl_Button_pressed"]

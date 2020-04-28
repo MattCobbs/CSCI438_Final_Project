@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Corona.ogg-c6824b063a22858954ff2c8b9b76fc08.oggstr"
+
+[deps]
+
+source_file="res://Resources/Audio/Corona.ogg"
+dest_files=[ "res://.import/Corona.ogg-c6824b063a22858954ff2c8b9b76fc08.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
