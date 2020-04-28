@@ -4,6 +4,6 @@ extends Node
 var round_number = 0
 
 
-
+var number_enemies = 2 
 
 

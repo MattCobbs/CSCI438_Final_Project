@@ -18,3 +18,5 @@ func _on_EnemyBullet_body_entered(body):
 	if body.is_in_group('Hero'):
 		body.got_shot(damage)
 		queue_free()
+	if not body.is_in_group('Enemy'):
+		queue_free()

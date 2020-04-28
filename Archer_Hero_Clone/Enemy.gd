@@ -16,6 +16,7 @@ func _process(delta):
 	healthBar.update(health, 100)
 	if(health < 1):
 		queue_free()
+		$"/root/Global".number_enemies -= 1
 
 func _physics_process(delta):
 	findTarget()

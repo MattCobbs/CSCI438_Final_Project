@@ -9,6 +9,7 @@ var enemies
 var health = 100
 
 const bulletScene = preload("res://HeroBullet.tscn")
+const coinScene = preload("res://Coin.tscn")
 onready var healthBar = $HealthBar3D
 onready var timer = $Timer
 
@@ -17,12 +18,13 @@ const ACCELARATION = 3
 const DE_ACCELARATION = 5 
 
 func _ready():
-	camera = get_node("Camera").get_global_transform()
+	camera = get_node("../Camera").get_global_transform()
 
 func _process(delta):
 	healthBar.update(health, 100)
 	if(health < 1):
 		queue_free()
+		get_tree().change_scene("res://GameOver.tscn")
 
 func _physics_process(delta):
 	var direction = Vector3()
@@ -108,14 +110,27 @@ func _on_Timer_timeout():
 	if(is_instance_valid(enemyToShoot)):
 		aim()
 		shoot()
+	if $"/root/Global".number_enemies < 1:
+		timer.stop()
+		#print("Hello")
+		get_node("../Coin").visible = not get_node("../Coin").visible 
+			#i.visible = not i.visible
+			#i.set_collision_layer_bit(0, false)
+			#i.set_collision_mask_bit(0, false)
+		#var coin = coinScene.instance()
+		#coin.transform.origin.x = 0
+		#coin.transform.origin.y = 2.5
+		#coin.transform.origin.z = -38.7
+		#get_parent().add_child(coin)
+		
 
 func got_shot(value):
 	health -= value
 
 
-func _on_Coin_body_entered(body):
-		if body.name == "Hero":
-			get_tree().change_scene("res://Testing_Scene.tscn")
+#func _on_Coin_body_entered(body):
+#		if body.name == "Hero":
+#			get_tree().change_scene("res://Testing_Scene.tscn")
 
 
 func _on_Checkpoint_body_entered(body):
