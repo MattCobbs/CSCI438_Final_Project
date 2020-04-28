@@ -15,4 +15,5 @@ dest_files=[ "res://.import/flower_beige3.obj-a61937b3e4de2201c246f4d740aa0b6a.m
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

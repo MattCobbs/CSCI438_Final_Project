@@ -15,4 +15,5 @@ dest_files=[ "res://.import/tree_plateau_dark.obj-fc0656784c6a58783e85ce2d5b6868
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

@@ -15,4 +15,5 @@ dest_files=[ "res://.import/flower_red2.obj-9ac2cc33d2a4a40221c8bdcea8d7a3b5.mes
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

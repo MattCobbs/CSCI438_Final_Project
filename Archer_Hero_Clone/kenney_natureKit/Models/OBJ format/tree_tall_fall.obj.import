@@ -15,4 +15,5 @@ dest_files=[ "res://.import/tree_tall_fall.obj-76b09208e50545a477faabb05838fe3d.
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

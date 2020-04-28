@@ -15,4 +15,5 @@ dest_files=[ "res://.import/cliffBrown_steps.obj-b17bf9fa713e562a41179a7ca6d5917
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

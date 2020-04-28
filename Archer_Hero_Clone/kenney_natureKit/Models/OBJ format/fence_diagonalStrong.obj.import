@@ -15,4 +15,5 @@ dest_files=[ "res://.import/fence_diagonalStrong.obj-839da66f3a4cd2531a975eba8e7
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

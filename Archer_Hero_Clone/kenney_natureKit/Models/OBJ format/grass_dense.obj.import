@@ -15,4 +15,5 @@ dest_files=[ "res://.import/grass_dense.obj-0f62240276f58dc7b4d772a3dea87c87.mes
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

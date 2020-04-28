@@ -15,4 +15,5 @@ dest_files=[ "res://.import/tree_blocks_fall.obj-b5a606dee15ec914f8f908ad168ff90
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

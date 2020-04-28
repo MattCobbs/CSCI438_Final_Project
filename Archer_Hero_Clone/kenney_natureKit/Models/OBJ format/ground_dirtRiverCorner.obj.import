@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ground_dirtRiverCorner.obj-963a8a17a50d6b519e5c0f21d
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

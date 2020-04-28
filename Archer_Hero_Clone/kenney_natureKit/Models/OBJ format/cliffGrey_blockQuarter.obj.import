@@ -15,4 +15,5 @@ dest_files=[ "res://.import/cliffGrey_blockQuarter.obj-6be584007c678a690dc51a5db
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

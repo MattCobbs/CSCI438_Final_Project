@@ -15,4 +15,5 @@ dest_files=[ "res://.import/palmDetailed_large.obj-cb261be48161a2c57b0d0ae91c7aa
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

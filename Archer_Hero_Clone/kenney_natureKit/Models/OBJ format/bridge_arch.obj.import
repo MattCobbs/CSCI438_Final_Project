@@ -15,4 +15,5 @@ dest_files=[ "res://.import/bridge_arch.obj-2f92ee75e323fa4738a4206923a4412f.mes
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

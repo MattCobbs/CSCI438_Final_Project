@@ -15,4 +15,5 @@ dest_files=[ "res://.import/fence_cornerRound.obj-f0ab8cd47ea1d4090ff0dd7162bd12
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

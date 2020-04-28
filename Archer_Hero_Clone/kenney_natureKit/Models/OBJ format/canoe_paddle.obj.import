@@ -15,4 +15,5 @@ dest_files=[ "res://.import/canoe_paddle.obj-3c627e631f2a51103fb7a83269c8188f.me
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

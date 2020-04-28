@@ -15,4 +15,5 @@ dest_files=[ "res://.import/tree_pine_shortSquare.obj-9165c3b1267c0e2aa0824a9ded
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

@@ -15,4 +15,5 @@ dest_files=[ "res://.import/tree_oak_fall.obj-477714a7a2919a98a891019da9f6bd6a.m
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
