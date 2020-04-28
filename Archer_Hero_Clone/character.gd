@@ -17,7 +17,7 @@ const ACCELARATION = 3
 const DE_ACCELARATION = 5 
 
 func _ready():
-	camera = get_node("../Camera").get_global_transform()
+	camera = get_node("Camera").get_global_transform()
 
 func _process(delta):
 	healthBar.update(health, 100)
@@ -111,3 +111,13 @@ func _on_Timer_timeout():
 
 func got_shot(value):
 	health -= value
+
+
+func _on_Coin_body_entered(body):
+		if body.name == "Hero":
+			get_tree().change_scene("res://Testing_Scene.tscn")
+
+
+func _on_Checkpoint_body_entered(body):
+	if body.name == "Hero":
+		get_tree().change_scene("res://Testing_Scene.tscn")
