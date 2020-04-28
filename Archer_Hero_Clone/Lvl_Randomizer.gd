@@ -1,13 +1,11 @@
 extends Spatial
 
-#var number_of_mods = 0
-#number_of_mods = $Base_Floor.get_child_count()
-
-#var mod_array = $Base_Floor.get_children()
-
-
 
 func _ready():
+	$"/root/Global".round_number += 1
+	
+	if $"/root/Global".round_number == 6:
+		get_tree().change_scene("res://Winner.tscn")
 	#seed the random number generator
 	randomize()
 	var num_mods = $Base_Floor.get_child_count()
@@ -16,4 +14,5 @@ func _ready():
 	for i in $Base_Floor.get_children():
 		if i.get_index() != rand_num:
 			i.visible = not i.visible
-	print(rand_num)
+			i.set_collision_layer_bit(0, false)
+			i.set_collision_mask_bit(0, false)

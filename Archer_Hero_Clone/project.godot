@@ -19,6 +19,10 @@ config/name="Archer_Hero_Clone"
 run/main_scene="res://Load_Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/size/width=1280

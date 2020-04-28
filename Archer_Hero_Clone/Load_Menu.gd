@@ -23,22 +23,16 @@ func _ready():
 	stopper.connect("Stoptime", self, "on_Timer_timeout")
 	next_scene.connect("NS_Time",self, "on_Timer_timeout")
 	timer.start()
-	
-
-
-
 
 func _on_Timer_timeout():
 	timer.stop()
 	audio.play()
 	stopper.start()
 
-
 func _on_Stopper_timeout():
 	stopper.stop()
 	audio.stop()
 	next_scene.start()
-
 
 func _on_Next_Scene_timeout():
 	get_tree().change_scene("res://Game_Menu.tscn")

@@ -29,17 +29,6 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 1, 0 )
 }
 
-[node name="Logs" type="GridMap" parent="Base_Floor"]
-mesh_library = ExtResource( 1 )
-cell_center_y = false
-data = {
-"cells": PoolIntArray( 131060, 65500, 1441885, 65545, 65505, 1441885, 131063, 65513, 1441885, 65549, 65514, 1441885, 131071, 65521, 1441885, 131059, 65530, 1441885 )
-}
-__meta__ = {
-"_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 1, 0 )
-}
-
 [node name="Rocks" type="GridMap" parent="Base_Floor"]
 mesh_library = ExtResource( 1 )
 cell_center_y = false

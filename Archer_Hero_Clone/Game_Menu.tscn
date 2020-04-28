@@ -8,14 +8,14 @@
 [ext_resource path="res://Resources/Hud_Images/pngwing.com.png" type="Texture" id=7]
 [ext_resource path="res://Char_Lvl.gd" type="Script" id=8]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.207843, 0.207843, 0.207843, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 32
 font_data = ExtResource( 2 )
 
@@ -32,7 +32,7 @@ size = 32
 outline_color = Color( 0.960784, 0.94902, 0.94902, 1 )
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=5]
 size = 24
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
@@ -51,7 +51,7 @@ margin_left = 9.0
 margin_top = 6.0
 margin_right = 235.0
 margin_bottom = 57.0
-custom_styles/normal = SubResource( 5 )
+custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,7 +66,7 @@ margin_left = 20.9461
 margin_top = 10.9461
 margin_right = 58.9461
 margin_bottom = 41.9461
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "Lvl"
 align = 1
 script = ExtResource( 8 )
@@ -108,7 +108,7 @@ margin_left = 572.513
 margin_top = 442.798
 margin_right = 676.513
 margin_bottom = 511.798
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color_hover = Color( 0.666667, 0.666667, 0.666667, 1 )
 text = "Play"
 script = ExtResource( 4 )
